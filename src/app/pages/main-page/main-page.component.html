@@ -1,5 +1,6 @@
 <div *ngFor="let vacation of vacations | async">
     <p (click)="goToDetails(vacation.id)">{{vacation.job_title}}</p>
 </div>
+<div *ngIf="serverEror">Server error, please run server on port 3000</div>
 
 

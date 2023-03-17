@@ -1,5 +1,14 @@
 <div>
+    <div class="details">
+       <p>Title: {{vacation?.job_title}}</p>
+       <p>On site : {{vacation?.job_start_date}} / {{vacation?.job_close_date}}</p>
+       <p>Description : {{vacation?.job_notes}}</p>
+       <p>Views : {{vacation?.number_of_openings}}</p>
+       <p>Work experince : <span *ngIf="vacation?.experience_required">yes</span>
+                           <span *ngIf="!vacation?.experience_required">No</span>
+        </p>
+    </div>
     <button type="button" (click)="deleteVacantion()">Delete vacantion</button>
-    <button type="button" (click)="showForm = true">Change vacantion</button>
-    <app-form [vakancy] = "vacation" [create]="false"></app-form>
+    <button type="button" (click)="showForm = !showForm">Change vacantion</button>
+    <app-form *ngIf="showForm" [vakancy] = "vacation" [create]="false"></app-form>
 </div>

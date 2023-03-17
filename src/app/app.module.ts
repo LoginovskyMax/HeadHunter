@@ -13,14 +13,14 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     AppComponent,
     HeaderComponent,
     MainPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

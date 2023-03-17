@@ -1,16 +1,16 @@
 <form [formGroup]="form" novalidate (ngSubmit)="submit()">
     <div class="form-group">
-        <label for="">Vakancy name</label>
-        <input type="text" formControlName="title">
+        <label class="form-group__label">Vakancy name</label>
+        <input type="text" formControlName="title" class="form-group__input">
         <div class="alert" *ngIf="form.controls['title'].invalid && form.controls['title'].touched">
           Add vakancy!
         </div>
-        <label for="">Notes</label>
-        <textarea  formControlName="notes"></textarea>
+        <label class="form-group__label">Notes</label>
+        <textarea  formControlName="notes" class="form-group__area"></textarea>
         <div class="alert" *ngIf="form.controls['notes'].invalid && form.controls['notes'].touched">
           Add notes!
         </div>
-      <button type="submit" *ngIf="create" [disabled]="form.invalid">Create</button>
-      <button type="submit" *ngIf="!create" [disabled]="form.invalid">Save</button>
+      <button type="submit" *ngIf="create" [disabled]="form.invalid" class="form-group__btn">Create</button>
+      <button type="submit" *ngIf="!create" [disabled]="form.invalid" class="form-group__btn">Save</button>
      </div>
 </form>

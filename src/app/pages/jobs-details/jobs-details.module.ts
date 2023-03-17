@@ -3,17 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { JobsDetailsRoutingModule } from './jobs-details-routing.module';
 import { JobsDetailsComponent } from './jobs-details.component';
-import { SharedModuleModule } from '../../shared-module/shared-module.module'; 
-
+import { SharedModuleModule } from '../../shared-module/shared-module.module';
 
 @NgModule({
   declarations: [
-    JobsDetailsComponent
+    JobsDetailsComponent,
   ],
   imports: [
     CommonModule,
     JobsDetailsRoutingModule,
-    SharedModuleModule
-  ]
+    SharedModuleModule,
+  ],
 })
 export class JobsDetailsModule { }
