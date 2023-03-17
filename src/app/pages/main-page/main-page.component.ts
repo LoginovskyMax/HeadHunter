@@ -23,6 +23,6 @@ export class MainPageComponent implements OnInit {
  
   ngOnInit():void{
     this.vacations = this.fetchService.getVacations()
-    
+    this.fetchService.getVacations().subscribe();
   }
 }

@@ -7,18 +7,32 @@ import { ServerResponse } from './server-response';
   providedIn: 'root'
 })
 export class FetchService {
+  hostName = "http://localhost:3000/jobs"
 
   constructor(private http:HttpClient) { }
 
   getVacations():Observable<ServerResponse[]>{
-     return this.http.get<ServerResponse[]>('http://localhost:3000/jobs')
+     return this.http.get<ServerResponse[]>(this.hostName)
   }
+
+  getOneVacation(id:number):Observable<ServerResponse>{
+    return this.http.get<ServerResponse>(`${this.hostName}/${id}`)
+ }
+
+ deleteOneVacation(id:number):void{
+  this.http.delete(`${this.hostName}/${id}`)
+ }
+
+ changeOneVacation(obj:ServerResponse):void{
+  console.log(obj);
+ this.http.put(`${this.hostName}/${obj.id}`,obj).subscribe((data)=>console.log(data))
+ }
   
   postVacantions():Observable<ServerResponse[]>{
     const body={
       name:'Karina',
       job:'Director'
     }
-    return this.http.post<ServerResponse[]>('http://localhost:3000/jobs',body)
+    return this.http.post<ServerResponse[]>(this.hostName,body)
   }
 }
