@@ -1,5 +1,5 @@
 export interface ServerResponse {
-    id: number
+    id?: number
     job_number: string
     job_title: string
     job_start_date: string

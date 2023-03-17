@@ -13,14 +13,6 @@ export class MainPageComponent implements OnInit {
   
   constructor(public fetchService:FetchService){}
 
-  show(){
-    this.fetchService.postVacantions().subscribe(
-      ( data:ServerResponse[])=>{
-            console.log(data);
-          }
-    )
-  }
- 
   ngOnInit():void{
     this.vacations = this.fetchService.getVacations()
     this.fetchService.getVacations().subscribe();

@@ -12,6 +12,7 @@ import { ServerResponse } from '../server-response';
 export class FormComponent implements OnChanges{
   form:FormGroup;
   @Input() vakancy:ServerResponse|null = null
+  @Input() create:boolean = false
 
   constructor( public fetchService:FetchService, private router:Router) {
     console.log(this.vakancy);
@@ -27,14 +28,21 @@ export class FormComponent implements OnChanges{
   
   
    submit(){
-    console.log("yes");
-    if(this.vakancy!==null){
-      let obj = {...this.vakancy}
-      obj.job_title = this.form.controls['title'].value
-      obj.job_notes = this.form.controls['notes'].value
-      this.fetchService.changeOneVacation(obj)
-      this.router.navigate(['jobs'])
-    }
+    
+      if(this.vakancy!==null){
+          let obj = {...this.vakancy}
+          obj.job_title = this.form.controls['title'].value
+          obj.job_notes = this.form.controls['notes'].value
+          if(this.create){
+            console.log('add');
+             this.fetchService.addVacantion(obj)
+          }else{
+            this.fetchService.changeOneVacation(obj)
+          }
+          this.router.navigate(['jobs'])
+      }
+     
+  
     
   
    }

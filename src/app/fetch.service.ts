@@ -28,11 +28,10 @@ export class FetchService {
  this.http.put(`${this.hostName}/${obj.id}`,obj).subscribe((data)=>console.log(data))
  }
   
-  postVacantions():Observable<ServerResponse[]>{
-    const body={
-      name:'Karina',
-      job:'Director'
-    }
-    return this.http.post<ServerResponse[]>(this.hostName,body)
+  addVacantion(obj:ServerResponse){
+    delete obj.id
+    console.log(obj);
+    
+     this.http.post<ServerResponse>(this.hostName,obj).subscribe()
   }
 }
