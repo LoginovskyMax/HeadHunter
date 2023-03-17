@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { FetchService } from 'src/app/fetch.service';
 import { ServerResponse } from 'src/app/server-response';
@@ -11,10 +12,14 @@ import { ServerResponse } from 'src/app/server-response';
 export class MainPageComponent implements OnInit {
   vacations:Observable<ServerResponse[]> = of([])
   
-  constructor(public fetchService:FetchService){}
-
+  constructor(public fetchService:FetchService, private router:Router){}
+   
   ngOnInit():void{
     this.vacations = this.fetchService.getVacations()
     this.fetchService.getVacations().subscribe();
+  }
+
+  goToDetails(id:number|undefined){
+   id && this.router.navigate(['job/'+id])
   }
 }

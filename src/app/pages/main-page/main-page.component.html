@@ -1,5 +1,5 @@
 <div *ngFor="let vacation of vacations | async">
-    <p>{{vacation.job_title}}</p>
+    <p (click)="goToDetails(vacation.id)">{{vacation.job_title}}</p>
 </div>
 
 

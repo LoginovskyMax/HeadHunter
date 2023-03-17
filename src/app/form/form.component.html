@@ -2,14 +2,15 @@
     <div class="form-group">
         <label for="">Vakancy name</label>
         <input type="text" formControlName="title">
-        <div class="alert" *ngIf="form.controls['title'].invalid">
-            Add vakancy!
+        <div class="alert" *ngIf="form.controls['title'].invalid && form.controls['title'].touched">
+          Add vakancy!
         </div>
         <label for="">Notes</label>
         <textarea  formControlName="notes"></textarea>
-        <div class="alert" *ngIf="form.controls['notes'].invalid">
+        <div class="alert" *ngIf="form.controls['notes'].invalid && form.controls['notes'].touched">
           Add notes!
         </div>
-      <button type="submit" [disabled]="form.invalid">Change</button>
+      <button type="submit" *ngIf="create" [disabled]="form.invalid">Create</button>
+      <button type="submit" *ngIf="!create" [disabled]="form.invalid">Save</button>
      </div>
 </form>

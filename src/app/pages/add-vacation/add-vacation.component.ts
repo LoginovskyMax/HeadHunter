@@ -9,11 +9,11 @@ export class AddVacationComponent implements OnInit {
   date = new Date()
   
   vakancy = {
-    id: Date.now(),
+    id: 0,
     job_number: "411-AKJ",
-    job_title: "Category",
-    job_start_date: this.date.toUTCString(),
-    job_close_date: "",
+    job_title: "",
+    job_start_date: this.date.toLocaleDateString(),
+    job_close_date: new Date(this.date.setDate(this.date.getDate() +7)).toLocaleDateString(),
     experience_required: true,
     number_of_openings: 1,
     job_notes: ""
