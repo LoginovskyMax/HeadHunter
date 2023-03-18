@@ -1,19 +1,14 @@
-.header{
-  box-sizing: border-box;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px;
-  box-shadow: 0 5px 5px -5px #f6e7ea;
-  color: white;
-  background-color: #0d0c10;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  &__logo{
-    cursor: pointer;
-  }
-  &__btn {
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items:self-start;
+    padding: 20px;
+    &__title{
+        font-size: 1.5em;
+    }
+}
+.btn {
     font-size: 16px;
     font-weight: 600;
     color: #fff;
@@ -32,4 +27,9 @@
       box-shadow: 0 0 5px 0 #764ba2 inset, 0 0 5px 2px #667eea;
     }
   }
+  .wrap{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

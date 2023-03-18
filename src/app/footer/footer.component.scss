@@ -1,0 +1,17 @@
+.footer{
+    box-sizing: border-box;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+    box-shadow: 0 5px 5px -5px #f6e7ea;
+   
+    background-color: #0d0c10;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    &__text{
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.603);
+    }
+}

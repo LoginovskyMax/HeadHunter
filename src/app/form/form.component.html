@@ -1,0 +1,21 @@
+<form [formGroup]="form" novalidate (ngSubmit)="submit()">
+    <div class="form-group">
+        <label class="form-group__label">Vakancy name</label>
+        <input type="text" formControlName="title" class="form-group__input" placeholder="Your title...">
+        <div class="alert" *ngIf="form.controls['title'].invalid && form.controls['title'].touched">
+          Add vakancy!
+        </div>
+        <label>
+          Work experience
+          <input type="checkbox" formControlName="experience">
+        </label>
+       
+        <label class="form-group__label">Notes</label>
+        <textarea  formControlName="notes" class="form-group__area" placeholder="Your description..."></textarea>
+        <div class="alert" *ngIf="form.controls['notes'].invalid && form.controls['notes'].touched">
+          Add notes!
+        </div>
+      <button type="submit" *ngIf="create" [disabled]="form.invalid" class="form-group__btn">Create</button>
+      <button type="submit" *ngIf="!create" [disabled]="form.invalid" class="form-group__btn">Save</button>
+     </div>
+</form>

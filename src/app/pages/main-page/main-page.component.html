@@ -1,0 +1,10 @@
+<h2 class="header">Vakancy list</h2>
+<ul  class="list">
+    <li *ngFor="let vacation of vacations | async" class="list__li">
+    <p (click)="goToDetails(vacation.id)" class="list__item">{{vacation.job_title}}</p>
+    </li>
+</ul>
+
+<div *ngIf="serverEror" class="server-err">Server error, please run server on port 3000</div>
+
+
