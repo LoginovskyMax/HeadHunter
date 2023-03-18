@@ -1,14 +1,18 @@
 <div>
-    <div class="details">
-       <p>Title: {{vacation?.job_title}}</p>
-       <p>On site : {{vacation?.job_start_date}} / {{vacation?.job_close_date}}</p>
-       <p>Description : {{vacation?.job_notes}}</p>
-       <p>Views : {{vacation?.number_of_openings}}</p>
-       <p>Work experince : <span *ngIf="vacation?.experience_required">yes</span>
-                           <span *ngIf="!vacation?.experience_required">No</span>
-        </p>
+    <div class="wrap">
+        <div class="details">
+            <p class="details__title">Title: {{vacation?.job_title}}</p>
+            <p class="details__text">On site : {{vacation?.job_start_date}} / {{vacation?.job_close_date}}</p>
+            <p class="details__text">Description : {{vacation?.job_notes}}</p>
+            <p class="details__text">Views : {{vacation?.number_of_openings}}</p>
+            <p  class="details__text">Work experince : <span *ngIf="vacation?.experience_required">yes</span>
+                                <span *ngIf="!vacation?.experience_required">No</span>
+             </p>
+         </div>
+        <app-form *ngIf="showForm" [vakancy] = "vacation" [create]="false"></app-form>
     </div>
-    <button type="button" (click)="deleteVacantion()">Delete vacantion</button>
-    <button type="button" (click)="showForm = !showForm">Change vacantion</button>
-    <app-form *ngIf="showForm" [vakancy] = "vacation" [create]="false"></app-form>
+  
+    <button type="button" (click)="deleteVacantion()" class="btn">Delete vacantion</button>
+    <button type="button" (click)="showForm = !showForm" class="btn">Change vacantion</button>
+    
 </div>

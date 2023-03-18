@@ -7,7 +7,7 @@
     border: 1px solid teal;
     border-radius: 20px;
     align-items: center;
-    width: 30%;
+    width: 200px;
     &__label{
         font-size: 1.2em;
         font-weight: bold;
@@ -31,4 +31,7 @@
             background-color: wheat;
         }
     }
+}
+.alert{
+    color: crimson
 }

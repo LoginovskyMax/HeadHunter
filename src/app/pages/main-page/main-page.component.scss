@@ -1,0 +1,29 @@
+.list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    &__li{
+        width: 30%;
+        list-style:circle;
+    }
+    &__item{
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+        padding: 10px 5px;
+        margin: 0;
+        transition: 0.4s;
+        border-radius: 10px;
+        background-color: wheat;
+        &:hover{
+            transform: translateX(5px);
+        }
+    }
+}
+.header{
+    text-align: center;
+}
