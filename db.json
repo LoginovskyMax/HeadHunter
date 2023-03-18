@@ -17,27 +17,17 @@
       "job_close_date": "25.03.2023",
       "experience_required": true,
       "number_of_openings": 28,
-      "job_notes": "sdfsdfdfdsfd",
+      "job_notes": "rtk. mobx",
       "id": 4
     },
     {
       "job_number": "411-AKJ",
-      "job_title": "new",
+      "job_title": "Vue developer",
       "job_start_date": "18.03.2023",
       "job_close_date": "25.03.2023",
       "experience_required": true,
       "number_of_openings": 3,
-      "job_notes": "wewewew",
-      "id": 5
-    },
-    {
-      "job_number": "411-AKJ",
-      "job_title": "ererere",
-      "job_start_date": "18.03.2023",
-      "job_close_date": "25.03.2023",
-      "experience_required": true,
-      "number_of_openings": 3,
-      "job_notes": "erererere",
+      "job_notes": "Vue, vuex, pinia",
       "id": 6
     }
   ]

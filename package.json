@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "eslint --ext .js,.ts .",
     "lint:fix": "eslint --ext .js,.ts . --fix",
-    "deploy": "ng deploy --base-href=https://LoginovskyMax.github.io/Job-vacation/",
+    "deploy": "ng deploy --base-href=https://LoginovskyMax.github.io/HeadHunter/",
     "json:server": "json-server --watch db.json"
   },
   "private": true,
